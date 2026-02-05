@@ -1,0 +1,560 @@
+{
+  "continents": [
+    {
+      "key": "africa",
+      "label": "Africa",
+      "countries": [
+        { "key": "algeria", "label": "Algeria", "iso2": "DZ", "iso3": "DZA" },
+        { "key": "angola", "label": "Angola", "iso2": "AO", "iso3": "AGO" },
+        { "key": "benin", "label": "Benin", "iso2": "BJ", "iso3": "BEN" },
+        { "key": "botswana", "label": "Botswana", "iso2": "BW", "iso3": "BWA" },
+        {
+          "key": "burkina-faso",
+          "label": "Burkina Faso",
+          "iso2": "BF",
+          "iso3": "BFA"
+        },
+        { "key": "burundi", "label": "Burundi", "iso2": "BI", "iso3": "BDI" },
+        {
+          "key": "cabo-verde",
+          "label": "Cabo Verde",
+          "iso2": "CV",
+          "iso3": "CPV"
+        },
+        { "key": "cameroon", "label": "Cameroon", "iso2": "CM", "iso3": "CMR" },
+        {
+          "key": "central-african-republic",
+          "label": "Central African Republic",
+          "iso2": "CF",
+          "iso3": "CAF"
+        },
+        { "key": "chad", "label": "Chad", "iso2": "TD", "iso3": "TCD" },
+        { "key": "comoros", "label": "Comoros", "iso2": "KM", "iso3": "COM" },
+        { "key": "congo", "label": "Congo", "iso2": "CG", "iso3": "COG" },
+        {
+          "key": "democratic-republic-of-the-congo",
+          "label": "Democratic Republic of the Congo",
+          "iso2": "CD",
+          "iso3": "COD"
+        },
+        { "key": "djibouti", "label": "Djibouti", "iso2": "DJ", "iso3": "DJI" },
+        { "key": "egypt", "label": "Egypt", "iso2": "EG", "iso3": "EGY" },
+        {
+          "key": "equatorial-guinea",
+          "label": "Equatorial Guinea",
+          "iso2": "GQ",
+          "iso3": "GNQ"
+        },
+        { "key": "eritrea", "label": "Eritrea", "iso2": "ER", "iso3": "ERI" },
+        { "key": "eswatini", "label": "Eswatini", "iso2": "SZ", "iso3": "SWZ" },
+        { "key": "ethiopia", "label": "Ethiopia", "iso2": "ET", "iso3": "ETH" },
+        { "key": "gabon", "label": "Gabon", "iso2": "GA", "iso3": "GAB" },
+        { "key": "gambia", "label": "Gambia", "iso2": "GM", "iso3": "GMB" },
+        { "key": "ghana", "label": "Ghana", "iso2": "GH", "iso3": "GHA" },
+        { "key": "guinea", "label": "Guinea", "iso2": "GN", "iso3": "GIN" },
+        {
+          "key": "guinea-bissau",
+          "label": "Guinea-Bissau",
+          "iso2": "GW",
+          "iso3": "GNB"
+        },
+        {
+          "key": "ivory-coast",
+          "label": "Ivory Coast",
+          "iso2": "CI",
+          "iso3": "CIV"
+        },
+        { "key": "kenya", "label": "Kenya", "iso2": "KE", "iso3": "KEN" },
+        { "key": "lesotho", "label": "Lesotho", "iso2": "LS", "iso3": "LSO" },
+        { "key": "liberia", "label": "Liberia", "iso2": "LR", "iso3": "LBR" },
+        { "key": "libya", "label": "Libya", "iso2": "LY", "iso3": "LBY" },
+        {
+          "key": "madagascar",
+          "label": "Madagascar",
+          "iso2": "MG",
+          "iso3": "MDG"
+        },
+        { "key": "malawi", "label": "Malawi", "iso2": "MW", "iso3": "MWI" },
+        { "key": "mali", "label": "Mali", "iso2": "ML", "iso3": "MLI" },
+        {
+          "key": "mauritania",
+          "label": "Mauritania",
+          "iso2": "MR",
+          "iso3": "MRT"
+        },
+        {
+          "key": "mauritius",
+          "label": "Mauritius",
+          "iso2": "MU",
+          "iso3": "MUS"
+        },
+        { "key": "morocco", "label": "Morocco", "iso2": "MA", "iso3": "MAR" },
+        {
+          "key": "mozambique",
+          "label": "Mozambique",
+          "iso2": "MZ",
+          "iso3": "MOZ"
+        },
+        { "key": "namibia", "label": "Namibia", "iso2": "NA", "iso3": "NAM" },
+        { "key": "niger", "label": "Niger", "iso2": "NE", "iso3": "NER" },
+        { "key": "nigeria", "label": "Nigeria", "iso2": "NG", "iso3": "NGA" },
+        { "key": "rwanda", "label": "Rwanda", "iso2": "RW", "iso3": "RWA" },
+        {
+          "key": "sao-tome-and-principe",
+          "label": "Sao Tome and Principe",
+          "iso2": "ST",
+          "iso3": "STP"
+        },
+        { "key": "senegal", "label": "Senegal", "iso2": "SN", "iso3": "SEN" },
+        {
+          "key": "seychelles",
+          "label": "Seychelles",
+          "iso2": "SC",
+          "iso3": "SYC"
+        },
+        {
+          "key": "sierra-leone",
+          "label": "Sierra Leone",
+          "iso2": "SL",
+          "iso3": "SLE"
+        },
+        { "key": "somalia", "label": "Somalia", "iso2": "SO", "iso3": "SOM" },
+        {
+          "key": "south-africa",
+          "label": "South Africa",
+          "iso2": "ZA",
+          "iso3": "ZAF"
+        },
+        {
+          "key": "south-sudan",
+          "label": "South Sudan",
+          "iso2": "SS",
+          "iso3": "SSD"
+        },
+        { "key": "sudan", "label": "Sudan", "iso2": "SD", "iso3": "SDN" },
+        { "key": "tanzania", "label": "Tanzania", "iso2": "TZ", "iso3": "TZA" },
+        { "key": "togo", "label": "Togo", "iso2": "TG", "iso3": "TGO" },
+        { "key": "tunisia", "label": "Tunisia", "iso2": "TN", "iso3": "TUN" },
+        { "key": "uganda", "label": "Uganda", "iso2": "UG", "iso3": "UGA" },
+        { "key": "zambia", "label": "Zambia", "iso2": "ZM", "iso3": "ZMB" },
+        { "key": "zimbabwe", "label": "Zimbabwe", "iso2": "ZW", "iso3": "ZWE" }
+      ]
+    },
+    {
+      "key": "antarctica",
+      "label": "Antarctica",
+      "countries": []
+    },
+    {
+      "key": "asia",
+      "label": "Asia",
+      "countries": [
+        {
+          "key": "afghanistan",
+          "label": "Afghanistan",
+          "iso2": "AF",
+          "iso3": "AFG"
+        },
+        { "key": "armenia", "label": "Armenia", "iso2": "AM", "iso3": "ARM" },
+        {
+          "key": "azerbaijan",
+          "label": "Azerbaijan",
+          "iso2": "AZ",
+          "iso3": "AZE"
+        },
+        { "key": "bahrain", "label": "Bahrain", "iso2": "BH", "iso3": "BHR" },
+        {
+          "key": "bangladesh",
+          "label": "Bangladesh",
+          "iso2": "BD",
+          "iso3": "BGD"
+        },
+        { "key": "bhutan", "label": "Bhutan", "iso2": "BT", "iso3": "BTN" },
+        { "key": "brunei", "label": "Brunei", "iso2": "BN", "iso3": "BRN" },
+        { "key": "cambodia", "label": "Cambodia", "iso2": "KH", "iso3": "KHM" },
+        { "key": "china", "label": "China", "iso2": "CN", "iso3": "CHN" },
+        { "key": "georgia", "label": "Georgia", "iso2": "GE", "iso3": "GEO" },
+        { "key": "india", "label": "India", "iso2": "IN", "iso3": "IND" },
+        {
+          "key": "indonesia",
+          "label": "Indonesia",
+          "iso2": "ID",
+          "iso3": "IDN"
+        },
+        { "key": "iran", "label": "Iran", "iso2": "IR", "iso3": "IRN" },
+        { "key": "iraq", "label": "Iraq", "iso2": "IQ", "iso3": "IRQ" },
+        { "key": "israel", "label": "Israel", "iso2": "IL", "iso3": "ISR" },
+        { "key": "japan", "label": "Japan", "iso2": "JP", "iso3": "JPN" },
+        { "key": "jordan", "label": "Jordan", "iso2": "JO", "iso3": "JOR" },
+        {
+          "key": "kazakhstan",
+          "label": "Kazakhstan",
+          "iso2": "KZ",
+          "iso3": "KAZ"
+        },
+        { "key": "kuwait", "label": "Kuwait", "iso2": "KW", "iso3": "KWT" },
+        {
+          "key": "kyrgyzstan",
+          "label": "Kyrgyzstan",
+          "iso2": "KG",
+          "iso3": "KGZ"
+        },
+        { "key": "laos", "label": "Laos", "iso2": "LA", "iso3": "LAO" },
+        { "key": "lebanon", "label": "Lebanon", "iso2": "LB", "iso3": "LBN" },
+        { "key": "malaysia", "label": "Malaysia", "iso2": "MY", "iso3": "MYS" },
+        { "key": "maldives", "label": "Maldives", "iso2": "MV", "iso3": "MDV" },
+        { "key": "mongolia", "label": "Mongolia", "iso2": "MN", "iso3": "MNG" },
+        { "key": "myanmar", "label": "Myanmar", "iso2": "MM", "iso3": "MMR" },
+        { "key": "nepal", "label": "Nepal", "iso2": "NP", "iso3": "NPL" },
+        {
+          "key": "north-korea",
+          "label": "North Korea",
+          "iso2": "KP",
+          "iso3": "PRK"
+        },
+        { "key": "oman", "label": "Oman", "iso2": "OM", "iso3": "OMN" },
+        { "key": "pakistan", "label": "Pakistan", "iso2": "PK", "iso3": "PAK" },
+        {
+          "key": "palestine",
+          "label": "Palestine",
+          "iso2": "PS",
+          "iso3": "PSE"
+        },
+        {
+          "key": "philippines",
+          "label": "Philippines",
+          "iso2": "PH",
+          "iso3": "PHL"
+        },
+        { "key": "qatar", "label": "Qatar", "iso2": "QA", "iso3": "QAT" },
+        {
+          "key": "saudi-arabia",
+          "label": "Saudi Arabia",
+          "iso2": "SA",
+          "iso3": "SAU"
+        },
+        {
+          "key": "singapore",
+          "label": "Singapore",
+          "iso2": "SG",
+          "iso3": "SGP"
+        },
+        {
+          "key": "south-korea",
+          "label": "South Korea",
+          "iso2": "KR",
+          "iso3": "KOR"
+        },
+        {
+          "key": "sri-lanka",
+          "label": "Sri Lanka",
+          "iso2": "LK",
+          "iso3": "LKA"
+        },
+        { "key": "syria", "label": "Syria", "iso2": "SY", "iso3": "SYR" },
+        {
+          "key": "tajikistan",
+          "label": "Tajikistan",
+          "iso2": "TJ",
+          "iso3": "TJK"
+        },
+        { "key": "thailand", "label": "Thailand", "iso2": "TH", "iso3": "THA" },
+        { "key": "turkey", "label": "Turkey", "iso2": "TR", "iso3": "TUR" },
+        {
+          "key": "turkmenistan",
+          "label": "Turkmenistan",
+          "iso2": "TM",
+          "iso3": "TKM"
+        },
+        {
+          "key": "united-arab-emirates",
+          "label": "United Arab Emirates",
+          "iso2": "AE",
+          "iso3": "ARE"
+        },
+        {
+          "key": "uzbekistan",
+          "label": "Uzbekistan",
+          "iso2": "UZ",
+          "iso3": "UZB"
+        },
+        { "key": "vietnam", "label": "Vietnam", "iso2": "VN", "iso3": "VNM" },
+        { "key": "yemen", "label": "Yemen", "iso2": "YE", "iso3": "YEM" }
+      ]
+    },
+    {
+      "key": "europe",
+      "label": "Europe",
+      "countries": [
+        { "key": "albania", "label": "Albania", "iso2": "AL", "iso3": "ALB" },
+        { "key": "andorra", "label": "Andorra", "iso2": "AD", "iso3": "AND" },
+        { "key": "austria", "label": "Austria", "iso2": "AT", "iso3": "AUT" },
+        { "key": "belarus", "label": "Belarus", "iso2": "BY", "iso3": "BLR" },
+        { "key": "belgium", "label": "Belgium", "iso2": "BE", "iso3": "BEL" },
+        {
+          "key": "bosnia-and-herzegovina",
+          "label": "Bosnia and Herzegovina",
+          "iso2": "BA",
+          "iso3": "BIH"
+        },
+        { "key": "bulgaria", "label": "Bulgaria", "iso2": "BG", "iso3": "BGR" },
+        { "key": "croatia", "label": "Croatia", "iso2": "HR", "iso3": "HRV" },
+        { "key": "cyprus", "label": "Cyprus", "iso2": "CY", "iso3": "CYP" },
+        {
+          "key": "czech-republic",
+          "label": "Czech Republic",
+          "iso2": "CZ",
+          "iso3": "CZE"
+        },
+        { "key": "denmark", "label": "Denmark", "iso2": "DK", "iso3": "DNK" },
+        { "key": "estonia", "label": "Estonia", "iso2": "EE", "iso3": "EST" },
+        { "key": "finland", "label": "Finland", "iso2": "FI", "iso3": "FIN" },
+        { "key": "france", "label": "France", "iso2": "FR", "iso3": "FRA" },
+        { "key": "germany", "label": "Germany", "iso2": "DE", "iso3": "DEU" },
+        { "key": "greece", "label": "Greece", "iso2": "GR", "iso3": "GRC" },
+        { "key": "hungary", "label": "Hungary", "iso2": "HU", "iso3": "HUN" },
+        { "key": "iceland", "label": "Iceland", "iso2": "IS", "iso3": "ISL" },
+        { "key": "ireland", "label": "Ireland", "iso2": "IE", "iso3": "IRL" },
+        { "key": "italy", "label": "Italy", "iso2": "IT", "iso3": "ITA" },
+        { "key": "kosovo", "label": "Kosovo", "iso2": "XK", "iso3": "XKX" },
+        { "key": "latvia", "label": "Latvia", "iso2": "LV", "iso3": "LVA" },
+        {
+          "key": "liechtenstein",
+          "label": "Liechtenstein",
+          "iso2": "LI",
+          "iso3": "LIE"
+        },
+        {
+          "key": "lithuania",
+          "label": "Lithuania",
+          "iso2": "LT",
+          "iso3": "LTU"
+        },
+        {
+          "key": "luxembourg",
+          "label": "Luxembourg",
+          "iso2": "LU",
+          "iso3": "LUX"
+        },
+        { "key": "malta", "label": "Malta", "iso2": "MT", "iso3": "MLT" },
+        { "key": "moldova", "label": "Moldova", "iso2": "MD", "iso3": "MDA" },
+        { "key": "monaco", "label": "Monaco", "iso2": "MC", "iso3": "MCO" },
+        {
+          "key": "montenegro",
+          "label": "Montenegro",
+          "iso2": "ME",
+          "iso3": "MNE"
+        },
+        {
+          "key": "netherlands",
+          "label": "Netherlands",
+          "iso2": "NL",
+          "iso3": "NLD"
+        },
+        {
+          "key": "north-macedonia",
+          "label": "North Macedonia",
+          "iso2": "MK",
+          "iso3": "MKD"
+        },
+        { "key": "norway", "label": "Norway", "iso2": "NO", "iso3": "NOR" },
+        { "key": "poland", "label": "Poland", "iso2": "PL", "iso3": "POL" },
+        { "key": "portugal", "label": "Portugal", "iso2": "PT", "iso3": "PRT" },
+        { "key": "romania", "label": "Romania", "iso2": "RO", "iso3": "ROU" },
+        { "key": "russia", "label": "Russia", "iso2": "RU", "iso3": "RUS" },
+        {
+          "key": "san-marino",
+          "label": "San Marino",
+          "iso2": "SM",
+          "iso3": "SMR"
+        },
+        { "key": "serbia", "label": "Serbia", "iso2": "RS", "iso3": "SRB" },
+        { "key": "slovakia", "label": "Slovakia", "iso2": "SK", "iso3": "SVK" },
+        { "key": "slovenia", "label": "Slovenia", "iso2": "SI", "iso3": "SVN" },
+        { "key": "spain", "label": "Spain", "iso2": "ES", "iso3": "ESP" },
+        { "key": "sweden", "label": "Sweden", "iso2": "SE", "iso3": "SWE" },
+        {
+          "key": "switzerland",
+          "label": "Switzerland",
+          "iso2": "CH",
+          "iso3": "CHE"
+        },
+        { "key": "ukraine", "label": "Ukraine", "iso2": "UA", "iso3": "UKR" },
+        {
+          "key": "united-kingdom",
+          "label": "United Kingdom",
+          "iso2": "GB",
+          "iso3": "GBR"
+        },
+        {
+          "key": "vatican-city",
+          "label": "Vatican City",
+          "iso2": "VA",
+          "iso3": "VAT"
+        }
+      ]
+    },
+    {
+      "key": "north-america",
+      "label": "North America",
+      "countries": [
+        {
+          "key": "antigua-and-barbuda",
+          "label": "Antigua and Barbuda",
+          "iso2": "AG",
+          "iso3": "ATG"
+        },
+        { "key": "bahamas", "label": "Bahamas", "iso2": "BS", "iso3": "BHS" },
+        { "key": "barbados", "label": "Barbados", "iso2": "BB", "iso3": "BRB" },
+        { "key": "belize", "label": "Belize", "iso2": "BZ", "iso3": "BLZ" },
+        { "key": "canada", "label": "Canada", "iso2": "CA", "iso3": "CAN" },
+        {
+          "key": "costa-rica",
+          "label": "Costa Rica",
+          "iso2": "CR",
+          "iso3": "CRI"
+        },
+        { "key": "cuba", "label": "Cuba", "iso2": "CU", "iso3": "CUB" },
+        { "key": "dominica", "label": "Dominica", "iso2": "DM", "iso3": "DMA" },
+        {
+          "key": "dominican-republic",
+          "label": "Dominican Republic",
+          "iso2": "DO",
+          "iso3": "DOM"
+        },
+        {
+          "key": "el-salvador",
+          "label": "El Salvador",
+          "iso2": "SV",
+          "iso3": "SLV"
+        },
+        { "key": "grenada", "label": "Grenada", "iso2": "GD", "iso3": "GRD" },
+        {
+          "key": "guatemala",
+          "label": "Guatemala",
+          "iso2": "GT",
+          "iso3": "GTM"
+        },
+        { "key": "haiti", "label": "Haiti", "iso2": "HT", "iso3": "HTI" },
+        { "key": "honduras", "label": "Honduras", "iso2": "HN", "iso3": "HND" },
+        { "key": "jamaica", "label": "Jamaica", "iso2": "JM", "iso3": "JAM" },
+        { "key": "mexico", "label": "Mexico", "iso2": "MX", "iso3": "MEX" },
+        {
+          "key": "nicaragua",
+          "label": "Nicaragua",
+          "iso2": "NI",
+          "iso3": "NIC"
+        },
+        { "key": "panama", "label": "Panama", "iso2": "PA", "iso3": "PAN" },
+        {
+          "key": "saint-kitts-and-nevis",
+          "label": "Saint Kitts and Nevis",
+          "iso2": "KN",
+          "iso3": "KNA"
+        },
+        {
+          "key": "saint-lucia",
+          "label": "Saint Lucia",
+          "iso2": "LC",
+          "iso3": "LCA"
+        },
+        {
+          "key": "saint-vincent-and-the-grenadines",
+          "label": "Saint Vincent and the Grenadines",
+          "iso2": "VC",
+          "iso3": "VCT"
+        },
+        {
+          "key": "trinidad-and-tobago",
+          "label": "Trinidad and Tobago",
+          "iso2": "TT",
+          "iso3": "TTO"
+        },
+        {
+          "key": "united-states",
+          "label": "United States",
+          "iso2": "US",
+          "iso3": "USA"
+        }
+      ]
+    },
+    {
+      "key": "oceania",
+      "label": "Australia (Oceania)",
+      "countries": [
+        {
+          "key": "australia",
+          "label": "Australia",
+          "iso2": "AU",
+          "iso3": "AUS"
+        },
+        { "key": "fiji", "label": "Fiji", "iso2": "FJ", "iso3": "FJI" },
+        { "key": "kiribati", "label": "Kiribati", "iso2": "KI", "iso3": "KIR" },
+        {
+          "key": "marshall-islands",
+          "label": "Marshall Islands",
+          "iso2": "MH",
+          "iso3": "MHL"
+        },
+        {
+          "key": "micronesia",
+          "label": "Micronesia",
+          "iso2": "FM",
+          "iso3": "FSM"
+        },
+        { "key": "nauru", "label": "Nauru", "iso2": "NR", "iso3": "NRU" },
+        {
+          "key": "new-zealand",
+          "label": "New Zealand",
+          "iso2": "NZ",
+          "iso3": "NZL"
+        },
+        { "key": "palau", "label": "Palau", "iso2": "PW", "iso3": "PLW" },
+        {
+          "key": "papua-new-guinea",
+          "label": "Papua New Guinea",
+          "iso2": "PG",
+          "iso3": "PNG"
+        },
+        { "key": "samoa", "label": "Samoa", "iso2": "WS", "iso3": "WSM" },
+        {
+          "key": "solomon-islands",
+          "label": "Solomon Islands",
+          "iso2": "SB",
+          "iso3": "SLB"
+        },
+        { "key": "tonga", "label": "Tonga", "iso2": "TO", "iso3": "TON" },
+        { "key": "tuvalu", "label": "Tuvalu", "iso2": "TV", "iso3": "TUV" },
+        { "key": "vanuatu", "label": "Vanuatu", "iso2": "VU", "iso3": "VUT" }
+      ]
+    },
+    {
+      "key": "south-america",
+      "label": "South America",
+      "countries": [
+        {
+          "key": "argentina",
+          "label": "Argentina",
+          "iso2": "AR",
+          "iso3": "ARG"
+        },
+        { "key": "bolivia", "label": "Bolivia", "iso2": "BO", "iso3": "BOL" },
+        { "key": "brazil", "label": "Brazil", "iso2": "BR", "iso3": "BRA" },
+        { "key": "chile", "label": "Chile", "iso2": "CL", "iso3": "CHL" },
+        { "key": "colombia", "label": "Colombia", "iso2": "CO", "iso3": "COL" },
+        { "key": "ecuador", "label": "Ecuador", "iso2": "EC", "iso3": "ECU" },
+        { "key": "guyana", "label": "Guyana", "iso2": "GY", "iso3": "GUY" },
+        { "key": "paraguay", "label": "Paraguay", "iso2": "PY", "iso3": "PRY" },
+        { "key": "peru", "label": "Peru", "iso2": "PE", "iso3": "PER" },
+        { "key": "suriname", "label": "Suriname", "iso2": "SR", "iso3": "SUR" },
+        { "key": "uruguay", "label": "Uruguay", "iso2": "UY", "iso3": "URY" },
+        {
+          "key": "venezuela",
+          "label": "Venezuela",
+          "iso2": "VE",
+          "iso3": "VEN"
+        }
+      ]
+    }
+  ]
+}
