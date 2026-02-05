@@ -21,7 +21,7 @@ connect({
 
   // Then we tell it how to render it
   renderFieldExtension(fieldExtensionId, ctx) {
-    if (fieldExtensionId === 'zonedDateTimePicker') {
+    if (fieldExtensionId === 'geographicArea') {
       return render(<GeographicArea ctx={ctx} />); // <-- Main component is here!
     }
   },

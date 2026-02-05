@@ -1,13 +1,13 @@
 import { RenderFieldExtensionCtx } from 'datocms-plugin-sdk';
 import { Canvas, SelectField } from 'datocms-react-ui';
-import { useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 import { data } from '../data/data';
 
 interface Props {
   ctx: RenderFieldExtensionCtx;
 }
 
-interface ListItem {
+interface SelectOption {
   value: string;
   label: string;
 }
@@ -17,24 +17,12 @@ interface Value {
   countries: string[];
 }
 
-function isValidJson(value: any): value is string[] {
-  return Array.isArray(value) && value.every((item) => typeof item === 'string');
-}
-
-function serialize(value: Value, fieldType: 'json' | 'string'): string {
-  if (fieldType === 'json') {
-    return JSON.stringify(value.map((o) => o.text));
-  }
-
-  return value.map((o) => o.text).join(', ');
-}
-
-function deserialize(value: any, fieldType: 'json' | 'string'): Value {}
-
 export default function GeographicArea({ ctx }: Props) {
-  const value = ctx.formValues[ctx.fieldPath] as Value | null;
+  //   const value = ctx.formValues[ctx.fieldPath] as Value | null;
+  const rawValue = ctx.formValues[ctx.fieldPath] as string | null;
+  const value: Value | null = rawValue ? JSON.parse(rawValue) : null;
 
-  const continentList = useMemo<ListItem[]>(
+  const continentOptions = useMemo<SelectOption[]>(
     () =>
       data.continents.map((x) => ({
         value: x.key,
@@ -43,48 +31,78 @@ export default function GeographicArea({ ctx }: Props) {
     [],
   );
 
-  const countries = useMemo<ListItem[]>(() => {
+  const countryOptions = useMemo<SelectOption[]>(() => {
     const continent = data.continents.find((x) => x.key === value?.continent);
+    if (!continent) return [];
+    return continent.countries.map((x) => ({
+      value: x.key,
+      label: x.label,
+    }));
+  }, [value?.continent]);
 
-    if (continent) {
-      return continent.countries.map((x) => ({
-        value: x.key,
-        label: x.label,
-      }));
-    }
-    return [];
-  }, [value]);
+  const selectedContinent = useMemo(
+    () => continentOptions.find((o) => o.value === value?.continent) ?? null,
+    [continentOptions, value?.continent],
+  );
 
-  try {
-    tags = deserialize(value, fieldType);
-  } catch (e) {
-    tags = undefined;
-  }
+  const selectedCountries = useMemo(
+    () => countryOptions.filter((o) => value?.countries?.includes(o.value)),
+    [countryOptions, value?.countries],
+  );
+
+  const handleContinentChange = useCallback(
+    (newValue: SelectOption | readonly SelectOption[] | null) => {
+      const selected = Array.isArray(newValue) ? newValue[0] : newValue;
+      ctx.setFieldValue(
+        ctx.fieldPath,
+        JSON.stringify({
+          continent: selected?.value ?? '',
+          countries: [],
+        }),
+      );
+    },
+    [ctx],
+  );
+
+  const handleCountriesChange = useCallback(
+    (newValue: readonly SelectOption[] | null) => {
+      ctx.setFieldValue(
+        ctx.fieldPath,
+        JSON.stringify({
+          continent: value?.continent ?? '',
+          countries: newValue?.map((o) => o.value) ?? [],
+        }),
+      );
+    },
+    [ctx, value?.continent],
+  );
 
   return (
     <Canvas ctx={ctx}>
       <SelectField
-        name="continentfieldPath"
-        id="continentfieldPath"
+        name="continent"
+        id="continent"
         label="Continent"
-        value={value?.continent}
+        value={selectedContinent}
         selectInputProps={{
-          options: continentList,
+          options: continentOptions,
+          isClearable: true,
         }}
-        onChange={(newValue) => ctx.setFieldValue(ctx.fieldPath, newValue)}
+        onChange={handleContinentChange}
       />
 
       <SelectField
-        name="countriesfieldPath"
-        id="countriesfieldPath"
-        label="Country"
-        hint={!value ? 'Select a continent first' : undefined}
-        value={value?.countries}
+        name="countries"
+        id="countries"
+        label="Countries"
+        hint={!value?.continent ? 'Select a continent first' : undefined}
+        value={selectedCountries}
         selectInputProps={{
-          isDisabled: !value || !value.continent,
-          options: countries,
+          isMulti: true,
+          isDisabled: !value?.continent,
+          options: countryOptions,
         }}
-        onChange={(newValue) => ctx.setFieldValue(ctx.fieldPath, newValue)}
+        onChange={handleCountriesChange}
       />
     </Canvas>
   );
