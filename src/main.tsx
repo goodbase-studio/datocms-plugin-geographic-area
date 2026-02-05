@@ -1,10 +1,32 @@
-import { connect } from "datocms-plugin-sdk";
-import "datocms-react-ui/styles.css";
-import ConfigScreen from "./entrypoints/ConfigScreen";
-import { render } from "./utils/render";
+import { connect, ManualFieldExtensionsCtx } from 'datocms-plugin-sdk';
+import 'datocms-react-ui/styles.css';
+import ConfigScreen from './entrypoints/ConfigScreen';
+import { render } from './utils/render';
+import GeographicArea from './components/GeographicArea';
 
 connect({
-	renderConfigScreen(ctx) {
-		return render(<ConfigScreen ctx={ctx} />);
-	},
+  // First we register the field extension with the plugin SDK
+  manualFieldExtensions(ctx: ManualFieldExtensionsCtx) {
+    return [
+      {
+        id: 'geographicArea',
+        name: 'Geographic Area',
+        type: 'editor',
+        // fieldTypes: ['string'],
+        fieldTypes: ['json'],
+        configurable: false,
+      },
+    ];
+  },
+
+  // Then we tell it how to render it
+  renderFieldExtension(fieldExtensionId, ctx) {
+    if (fieldExtensionId === 'zonedDateTimePicker') {
+      return render(<GeographicArea ctx={ctx} />); // <-- Main component is here!
+    }
+  },
+
+  renderConfigScreen(ctx) {
+    return render(<ConfigScreen ctx={ctx} />);
+  },
 });

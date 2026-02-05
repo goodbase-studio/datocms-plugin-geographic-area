@@ -1,4 +1,4 @@
-{
+export const data = {
   "continents": [
     {
       "key": "africa",
@@ -557,4 +557,4 @@
       ]
     }
   ]
-}
+};
