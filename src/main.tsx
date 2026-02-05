@@ -6,13 +6,13 @@ import GeographicArea from './components/GeographicArea';
 
 connect({
   // First we register the field extension with the plugin SDK
+  // @ts-ignore
   manualFieldExtensions(ctx: ManualFieldExtensionsCtx) {
     return [
       {
         id: 'geographicArea',
         name: 'Geographic Area',
         type: 'editor',
-        // fieldTypes: ['string'],
         fieldTypes: ['json'],
         configurable: false,
       },
