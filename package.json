@@ -7,7 +7,7 @@
   "author": "goodbase <marcello@goodbase.studio>",
   "type": "module",
   "keywords": [
-    "datocms-plugin"
+    "datocms-plugin continent country countries world"
   ],
   "datoCmsPlugin": {
     "title": "Datocms Plugin Geographic Area",
