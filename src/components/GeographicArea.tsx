@@ -1,5 +1,5 @@
 import { RenderFieldExtensionCtx } from 'datocms-plugin-sdk';
-import { Canvas, SelectField } from 'datocms-react-ui';
+import { Canvas, SelectField, FieldGroup } from 'datocms-react-ui';
 import { useCallback, useMemo } from 'react';
 import { data } from '../data/data';
 
@@ -17,10 +17,22 @@ interface Value {
   countries: string[];
 }
 
+function parseValue(raw: unknown): Value | null {
+  if (!raw || typeof raw !== 'string') return null;
+
+  try {
+    const parsed = JSON.parse(raw) as Value;
+    if (typeof parsed.continent === 'string' && Array.isArray(parsed.countries)) {
+      return parsed;
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
 export default function GeographicArea({ ctx }: Props) {
-  //   const value = ctx.formValues[ctx.fieldPath] as Value | null;
-  const rawValue = ctx.formValues[ctx.fieldPath] as string | null;
-  const value: Value | null = rawValue ? JSON.parse(rawValue) : null;
+  const value = parseValue(ctx.formValues[ctx.fieldPath]);
 
   const continentOptions = useMemo<SelectOption[]>(
     () =>
@@ -65,12 +77,13 @@ export default function GeographicArea({ ctx }: Props) {
   );
 
   const handleCountriesChange = useCallback(
-    (newValue: readonly SelectOption[] | null) => {
+    (newValue: SelectOption | readonly SelectOption[] | null) => {
+      const selected = Array.isArray(newValue) ? newValue : newValue ? [newValue] : [];
       ctx.setFieldValue(
         ctx.fieldPath,
         JSON.stringify({
           continent: value?.continent ?? '',
-          countries: newValue?.map((o) => o.value) ?? [],
+          countries: selected.map((o) => o.value),
         }),
       );
     },
@@ -79,31 +92,33 @@ export default function GeographicArea({ ctx }: Props) {
 
   return (
     <Canvas ctx={ctx}>
-      <SelectField
-        name="continent"
-        id="continent"
-        label="Continent"
-        value={selectedContinent}
-        selectInputProps={{
-          options: continentOptions,
-          isClearable: true,
-        }}
-        onChange={handleContinentChange}
-      />
+      <FieldGroup>
+        <SelectField
+          name="continent"
+          id="continent"
+          label="Continent"
+          value={selectedContinent}
+          selectInputProps={{
+            options: continentOptions,
+            isClearable: true,
+          }}
+          onChange={handleContinentChange}
+        />
 
-      <SelectField
-        name="countries"
-        id="countries"
-        label="Countries"
-        hint={!value?.continent ? 'Select a continent first' : undefined}
-        value={selectedCountries}
-        selectInputProps={{
-          isMulti: true,
-          isDisabled: !value?.continent,
-          options: countryOptions,
-        }}
-        onChange={handleCountriesChange}
-      />
+        <SelectField
+          name="countries"
+          id="countries"
+          label="Countries"
+          hint={!value?.continent ? 'Select a continent first' : undefined}
+          value={selectedCountries}
+          selectInputProps={{
+            isMulti: true,
+            isDisabled: !value?.continent,
+            options: countryOptions,
+          }}
+          onChange={handleCountriesChange}
+        />
+      </FieldGroup>
     </Canvas>
   );
 }
