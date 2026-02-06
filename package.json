@@ -3,7 +3,7 @@
   "description": "This DatoCMS plugin includes 2 fields for selecting a continent and one or more countries of the selected continent.",
   "homepage": "https://github.com/goodbase-studio/datocms-plugin-geographic-area",
   "private": false,
-  "version": "0.1.2",
+  "version": "1.0.0",
   "author": "goodbase <marcello@goodbase.studio>",
   "type": "module",
   "keywords": [
