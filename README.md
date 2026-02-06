@@ -1,3 +1,5 @@
-# Datocms Plugin Geographic Area
+# DatoCMS Plugin Geographic Area
+
+![Cover](./docs/cover.png)
 
 This DatoCMS plugin includes a FieldExtension applicable to a JSON field: it will display 2 fields for selecting a continent and one or more countries of the selected continent.
