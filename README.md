@@ -21,10 +21,12 @@ The data structure will be a stringified JSON object with the following structur
 
 <br/>
 <hr/>
-<a href="https://goodbase.studio/">
+<a href="https://goodbase.studio/" width="159" height="32">
     <!-- <img src="./docs/logo.svg" alt="Goodbase Studio" width="159" height="32"> -->
     <picture>
         <source srcset="https://github.com/goodbase-studio/datocms-plugin-geographic-area/blob/7c91d06308d2a3a032cc37a570aadefd5b0ffc55/docs/logo-dark.png" media="(prefers-color-scheme: dark)">
-        <img src="https://github.com/goodbase-studio/datocms-plugin-geographic-area/blob/7c91d06308d2a3a032cc37a570aadefd5b0ffc55/docs/logo-light.png" alt="goodbase studio">
+        <img src="https://github.com/goodbase-studio/datocms-plugin-geographic-area/blob/7c91d06308d2a3a032cc37a570aadefd5b0ffc55/docs/logo-light.png" 
+        width="159" height="32"
+        alt="goodbase studio">
     </picture>
 </a>
