@@ -1,6 +1,6 @@
 # DatoCMS Plugin Geographic Area
 
-![Cover](https://github.com/goodbase-studio/datocms-plugin-geographic-area/blob/4fbeea4ca7e2e9957452387873aba9b40a97c239/docs/cover-1200x800.png)
+![Cover](docs/cover-1200x800.png)
 
 This DatoCMS plugin includes a FieldExtension applicable to a JSON field: it will display 2 fields for selecting a continent and one or more countries of the selected continent.
 
@@ -21,6 +21,6 @@ The data structure will be a stringified JSON object with the following structur
 
 <br/>
 <hr/>
-<a href="https://goodbase.studio/">
-    <img src="docs/logo-dark.png" width="159" height="32" alt="goodbase studio">
-</a>
+<p>Developed with love by&nbsp;
+    <a href="https://goodbase.studio/">goodbase</a>
+</p>
