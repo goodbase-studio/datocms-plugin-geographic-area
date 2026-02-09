@@ -3,6 +3,7 @@
 ![Cover](docs/cover-1200x800.png)
 
 This DatoCMS plugin includes a FieldExtension applicable to a JSON field: it will display 2 fields for selecting a continent and one or more countries of the selected continent.
+Optionally it's possible to display only the countries selector, just activate the switch.
 
 ## Instructions
 
@@ -15,6 +16,15 @@ The data structure will be a stringified JSON object with the following structur
 ```json
 {
   "continent": "north-america",
+  "countries": ["canada", "cuba"]
+}
+```
+
+_Note_: if the flag to display only the countries is on, then the continent value will be null, i.g.:
+
+```json
+{
+  "continent": null,
   "countries": ["canada", "cuba"]
 }
 ```
